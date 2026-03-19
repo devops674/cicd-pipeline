@@ -4,8 +4,9 @@ agent any
             steps {
                 script {
                     try {
-                        echo "Running linux commands"
+                        
                         sh '''
+						echo "Running linux commands"
 						whoami
 						'''
                     } catch (Exception e) {
