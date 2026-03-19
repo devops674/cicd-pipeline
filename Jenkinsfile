@@ -5,7 +5,9 @@ agent any
                 script {
                     try {
                         echo "Running linux commands"
-                        sh "whoami"
+                        sh '''
+						whoami
+						'''
                     } catch (Exception e) {
                         echo "command is not running: ${e.getMessage()}"
                     }               
