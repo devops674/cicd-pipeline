@@ -1,16 +1,15 @@
 pipeline {
 agent any
-	stages {
-	  stage('demo run linux command') {
-	    steps {
-			scripts {
-				try { 
-					sh "whoam"
-					} catch (Exception e) {
-					echo "Command execution failed: ${e.getMessage()}"
-					}
-			}
-		}
-	  }
-	}
+	stage('Demo commands') {
+            steps {
+                script {
+                    try {
+                        echo "Running linux commands"
+                        sh "whoami"
+                    } catch (Exception e) {
+                        echo "command is not running: ${e.getMessage()}"
+                    }               
+                }
+            }
+        }
 }
