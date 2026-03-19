@@ -1,11 +1,14 @@
-stages {
-  stage('demo run linux command') {
-    steps {
-      sh '''
-        pwd 
-        whoami
-        uname -a
-      '''
-    }
-  }
+pipeline {
+agent any
+	stages {
+	  stage('demo run linux command') {
+	    steps {
+	      sh '''
+	        pwd 
+	        whoami
+	        uname -a
+	      '''
+	    }
+	  }
+	}
 }
