@@ -20,7 +20,6 @@ pipeline {
             steps {
                 echo 'Running PySonar...'
                 sh """
-                cd crypto-tax-calculator/
                 sudo pysonar --sonar-host-url=http://15.206.122.81:9000 --sonar-token=sqp_e05d33feff6b0e0ce14d63dbc5a4ad43d4948636 --sonar-project-key=DevSecOps_project_CI
                 """
             }
